@@ -1,0 +1,173 @@
+/* .cards {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+} */
+
+.App {
+  /* background: rgb(2,0,36); */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,45,70,1) 35%, rgba(0,212,255,1) 100%);
+  text-align: center;
+  /* background-image: url("https://images.pexels.com/photos/3279307/pexels-photo-3279307.jpeg"); */
+  background-attachment: fixed;
+  background-size: cover;
+  /* height: 100vh; */
+  margin: 0px;
+}
+/* body {
+  background: url(url_tu_imagen); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+} */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#id {
+  text-decoration: overline;
+  lighting-color: #61dafb;
+}
+
+
+.Applt {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(95,213,160,1) 35%, rgba(0,212,255,1) 100%);
+  text-align: center;
+  /* background-image: url("https://images.pexels.com/photos/4166011/pexels-photo-4166011.jpeg?auto=compress&cs=tinysrgb&w=1600"); */
+  background-size: cover;
+  color: darkgoldenrod;
+  /* height: 100vw; */
+  margin: 0px;
+}
+
+.Applt-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Applt-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Applt-header {
+  background-color: #e8eaef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.Applt-link {
+  color: #201538;
+}
+
+@keyframes Applt-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  text-align: right;
+  color: rgb(77, 37, 37);
+  margin-top: 0%;
+  /* position: fixed; Para que no se mueva */
+  width: 95%; /*Cubre todo el ancho de la pantalla*/
+  z-index: 100; 
+  position: static;
+  margin-bottom: 0;
+  bottom: 0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #13382f;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: #1881c2;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}

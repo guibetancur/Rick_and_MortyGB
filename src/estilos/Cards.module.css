@@ -1,0 +1,7 @@
+.cards {
+   display: flexbox;
+   flex-direction: row-reverse;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+}

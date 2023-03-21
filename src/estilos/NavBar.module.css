@@ -1,0 +1,13 @@
+.nav {
+   top: 0%;
+   position: fixed; /*Para que no se mueva*/
+   width: 100%; /*Cubre todo el ancho de la pantalla*/
+   z-index: 100; 
+   background: darkcyan;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around; /* flex-end*/
+   border: 2px solid rgb(216, 191, 191);
+   padding: 8px;
+   border-radius: 6px;
+}
