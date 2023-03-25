@@ -9,6 +9,9 @@ import NavBar from './components/NavBar' // Llamará a SearchBar
 //import characters from './data'
 import { useState, useRef, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
+import Favorites from './components/Favorites';
+import Portfolio from './components/Portfolio';
+
 const location = useLocation
 var msg
 
@@ -19,6 +22,7 @@ function alerta(message) {
 }
 
 function App() {
+  
   const location = useLocation()
   const [darkMode, setDarkMode] = useState(false)
   const toggleDarkMode = () => setDarkMode(!darkMode)
@@ -32,9 +36,8 @@ function App() {
 
   function login(userData) {
     if (userData.password === pwd && userData.username === usrName) {
-      debugger
-      console.log(usrName, pwd)
-      console.log(userData.username, userData.password)
+      // console.log(usrName, pwd)
+      // console.log(userData.username, userData.password)
       setAccess(true)
       navigate('/home')
     }
@@ -91,7 +94,7 @@ function App() {
       <span id='msg'></span>
       <div>
         {/* {location.pathname ==="/" ? null : <NavBar onSearch={onSearch} />} */}
-        {window.location.pathname !== '/' && <NavBar onSearch={onSearch} logout={logout} random={random} />}
+        {location.pathname === '/'? null : <NavBar onSearch={onSearch} logout={logout} random={random} />}
 
       </div>
       <div>
@@ -106,6 +109,8 @@ function App() {
           <Route path='/home' element={<Cards characters={characters} onClose={onClose} />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/detail/:detailId' element={<Detail />}></Route>
+          <Route path='/favorites' element={<Favorites characters={characters} onClose={onClose} />}></Route>
+          <Route path='/portfolio' element={<Portfolio />}></Route>
           {/* <Route path='/logout' element={<Login />}></Route> */}
         </Routes>
       </div>

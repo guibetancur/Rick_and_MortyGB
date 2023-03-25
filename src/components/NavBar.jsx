@@ -15,11 +15,20 @@ export default function NavBar(props) {
             {/* <button>About</button> */}
          </Link>
          <a href="_blank">Autors</a>
-         <Link to='/about'>
+         {/* <Link to='/about'> */}
+         <Link to='www.google.com.co'>
+            {/* <a href="about">About Me...</a> */}
             <a href="about">About Me...</a>
          </Link>
+         <Link to='/favorites'>
+            <a href="favorites">Favorites</a>
+         </Link>
+         <Link to='/portfolio'>
+            <a href="portfolio">Portfolio</a>
+         </Link>
          <Link to='/'>
-            <a href="/" on>Logout</a>
+            {/* <button onClick={props.logout}>LogOut</button> */}
+            <a href="/" onClick={props.logout}>Logout</a>
          </Link>
          <div>
             <SearchBar onSearch={props.onSearch} />
