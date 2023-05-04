@@ -14,7 +14,7 @@ import Portfolio from './components/Portfolio';
 
 const location = useLocation
 var msg
-
+// document.body.contentEditable = true
 function alerta(message) {
   msg = document.getElementById('msg')
   msg.innerText = message
